@@ -8,7 +8,7 @@ By: Eyzel Cang and Sasha Chua of 9 - Rubidium
 
 ### **1. Logo/Favicon**
 
-![ClickHub Logo](https://cdn.discordapp.com/attachments/1349348411593461800/1433074627520757760/image.png?ex=69035e40&is=69020cc0&hm=482473777649f34224a4d1b576e44544dd3324fe5ab7fd9b11645c81069e47d5&)
+![ClickHub Logo]<link rel="logo" href="./assets/ClickHub-Logo.png">
 
 ---
 
