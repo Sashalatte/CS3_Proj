@@ -1,0 +1,136 @@
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  height: 100vh;
+  overflow: hidden;
+}
+
+nav {
+    display: flex;
+    text-indent: 10px;
+    gap: 100px;
+    padding: 10px 20px;
+    text-decoration: none;
+    top: 250px;
+    justify-content: space-evenly;
+    font-size: 5rem;
+}
+
+nav a{ 
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  position: relative;
+  top: 10px;
+}
+
+/* background */
+.page-background {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  filter: brightness(0.9);
+}
+
+/* bruh basta yun */
+.overlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  pointer-events: none;
+}
+
+.overlay * {
+  pointer-events: auto;
+}
+
+/* buttons */
+button {
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 15px 30px;
+  font-size: 3em;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+  transform: translateY(-10px) scale(1.05);
+}
+
+/* scaling */
+@media (max-width: 768px) {
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.2rem; }
+  button { padding: 10px 20px; font-size: 0.9rem; }
+}
+
+/* specifics */
+
+/* welcome */
+body.home-page .overlay {
+  position: absolute;
+  top: 40%;
+  left: 15%;
+  transform: translate(-10%, -30%);
+  text-align: left;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+/* headings */
+body.home-page .overlay h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+body.home-page .overlay h1 {
+  margin: 5px 0 20px 0;
+  font-size: 3rem;
+  font-weight: 800;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+
+body.home-page .overlay p {
+  position: relative;
+  top: 80px; 
+  left: 8%;
+  font-size: 1.7rem;
+  line-height: 1.4;
+  margin-bottom: 25px;
+  color: #d7e6ff;
+}
+
+
+body.home-page button {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translateX(-30%);
+}
+
+body.home-page button:hover {
+  transform: translateX(-30%) translateY(-10px) scale(1.05);
+}

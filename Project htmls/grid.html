@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClickHub — Choose Your Grid</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+
+    body{
+        background-color: rgb(1, 1, 0);
+    }
+    .grid-options {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .grid-option {
+      position: relative;
+      cursor: pointer;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 3px solid transparent;
+      transition: all 0.3s ease;
+      width: 300px;
+      height: 280px;
+    }
+
+    .grid-option:hover {
+      transform: scale(1.05);
+    }
+
+    .grid-option img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="page-background" style="background-image: url('background-grid.png');"></div>
+
+  <header>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="grid.html">Grid</a>
+      <a href="booth.html">Booth</a>
+      <a href="edit.html">Edit</a>
+      <a href="download.html">Download</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <div class="overlay">
+    <h1>Choose Your Grid</h1>
+    <p>Select a layout below:</p>
+
+    <div class="grid-options">
+      <div class="grid-option" onclick="chooseGrid('1x1')">
+        <img src="grid-4x1.png" alt="1x1 Grid">
+      </div>
+      <div class="grid-option" onclick="chooseGrid('2x2')">
+        <img src="grid-2x2.png" alt="2x2 Grid">
+      </div>
+      <div class="grid-option" onclick="chooseGrid('4x2')">
+        <img src="grid-4x2.png" alt="4x2 Grid">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function chooseGrid(type) {
+      localStorage.setItem("selectedGrid", type);
+      window.location.href = "booth.html";
+    }
+  </script>
+</body>
+</html>
