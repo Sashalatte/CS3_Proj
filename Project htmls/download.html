@@ -6,6 +6,11 @@
   <title>ClickHub — Download</title>
   <link rel="stylesheet" href="style.css">
 </head>
+<style>
+  button{
+    font-size:20px;
+  }
+</style>
 <body>
   <div class="page-background" style="background-image: url('background-download.png');"></div>
 
@@ -22,9 +27,7 @@
 
   <div class="overlay">
     <h1>Download Your Photo</h1>
-    <p class="muted">Preview your edited image below and save it.</p>
-    <img id="final-photo" src="https://via.placeholder.com/400x250?text=Your+Photo" 
-         alt="Your final photo" style="max-width:90%; border-radius:10px; border:2px solid #6ee7b7;">
+    <p class="muted">Preview your edited image below and save it.</p>    
     <div style="margin-top:20px;">
       <button onclick="downloadImage()">Download</button>
     </div>

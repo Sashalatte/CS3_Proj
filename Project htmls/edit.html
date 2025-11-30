@@ -6,6 +6,14 @@
   <title>ClickHub — Edit</title>
   <link rel="stylesheet" href="style.css">
 </head>
+<style>
+  .overlay{
+    margin-left: 400px;
+  }
+  button {
+    font-size: 20px;
+  }
+</style>
 <body>
   <div class="page-background" style="background-image: url('background-edit.png');"></div>
 
@@ -23,7 +31,7 @@
   <div class="overlay">
     <h1>Edit Your Photo</h1>
     <p>Apply simple effects below.</p>
-    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:10px;">
+  <div style="display:flex; flex-direction:column; align-items:center; gap:10px;">
       <button onclick="alert('Brightness adjusted!')">Brightness</button>
       <button onclick="alert('Contrast applied!')">Contrast</button>
       <button onclick="alert('Filters added!')">Filter</button>
